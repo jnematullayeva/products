@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productlar</title>
+</head>
+<body>
+    {% for el in products %}
+    {{ el.id }}
+    <a href='{% url 'product-detail' product.pk %}'>{{el.name}}</a>
+    {% endfor %}
+</body>
+</html>
+{% endblock content %}

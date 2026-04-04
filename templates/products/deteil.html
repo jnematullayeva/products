@@ -1,0 +1,22 @@
+{% extends "basa.html" %} 
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product detail</title>
+</head>
+<body>
+   <h2>{{ el.name }}</h2>
+   <h2>{{ el.desc }}</h2>
+   <h2>{{ el.price }}</h2>
+   <h2>{{ el.stock }}</h2>
+   <h2>{{ el.is_available }}</h2>
+   <a href='{% url 'product-update' product.pk %}'>Yangilash</a>
+   <a href='{% url 'product-delete' product.pk %}'>O'chirish</a>
+   <a href='{% url 'product-list'  %}'>Ortga</a>
+
+</body>
+</html>
+{%endblock content %}
