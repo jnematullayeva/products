@@ -9,8 +9,8 @@
 </head>
 <body>
     <form action="{% url 'product-delete' product.pk %}" method="post">
-        {% {% csrf_token %} %}
-        {{ el.name }} - Productni o'chirmoqchimisiz?
+        {% csrf_token %}
+        {{ product.name }} - Productni o'chirmoqchimisiz?
         <button type='submit'>Ha o'chirilsin !</button>
     </form>
     <a href='{% url 'product-list' %}'>Ortga</a>

@@ -10,7 +10,7 @@
 <body>
     {% for el in products %}
     {{ el.id }}
-    <a href='{% url 'product-detail' product.pk %}'>{{el.name}}</a>
+    <a href='{% url 'product-detail' el.pk %}'>{{el.name}}</a>
     {% endfor %}
 </body>
 </html>
